@@ -87,7 +87,7 @@ doSomething `result += Number(process.argv[i])` I'm going to break this down:
 - `Number()`: converts the contents of the brackets into its number equivelant. For example `Number("4")` gives me the value 4, `Number(false)` gives me the value 0. This is necessary as the arguments of process.argv are not numbers, they are strings.
 - `process.argv[i]`: The object in position i of the array. This means that depending on how many times the For loop runs, the value of i will reflect a different object inside the array.
 
-So pulling all this together means, add the number value of current object in the array to our variable result. By looking back with your new found knowledge you should be able to understand the logic of the For loop and what it is doing. In short, the loop is selecting number argument in the array and adding it to a running total. 
+So pulling all this together means, add the number value of current object in the array to our variable result. By looking back with your new found knowledge you should be able to understand the logic of the For loop and what it is doing. In short, the loop is selecting number arguments in the array and adding it to a running total. 
 
 We are not quite finished. The result variable is still undefined. Logically, the result variale should start at 0, as if there are no number arguments given, the answer is 0. So At the top of your script:
 
