@@ -80,7 +80,7 @@ So allow me to explain.
 
 >  Also be aware that all elements of `process.argv` are strings and you may need to *coerce* them into numbers. You can do this by prefixing the property with `+` or passing it to `Number()`. e.g. `+process.argv[2]` or `Number(process.argv[2])`.
 
-4.  doSomething `result += Number(process.argv[i])` I'm going to break this down:
+-  doSomething `result += Number(process.argv[i])` I'm going to break this down:
 -  `result`: an undefined variable
 - `+=`: add and reassign. So the number on the right hand side is added to the value of the variable on the left hand side. Then the new value is given to the variable. For example: if my variable `shoes` has a value of 3, then the line `shoes += 4` will change the value to 7.
 - `Number()`: converts the contents of the brackets into its number equivelant. For example `Number("4")` gives me the value 4, `Number(false)` gives me the value 0. This is necessary as the arguments of process.argv are not numbers, they are strings.
