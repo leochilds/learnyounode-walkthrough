@@ -102,10 +102,10 @@ And then we use our `console.log()` to print out the result variable.
 So to run with some arguments try:
 
 ``` sh
-$ learnyounode program.js 1 2 3 4
+$ learnyounode program.js 1 2 3
 ```
 
-Which should give you the result 10. And verify with:
+Which should give you the result 6. And verify with:
 
 ``` sh
 $ learnyounode verify program.js
