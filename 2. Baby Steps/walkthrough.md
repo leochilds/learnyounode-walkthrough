@@ -68,9 +68,9 @@ Statement1 is a variable declaration. Statement2 is a condition to run the scrip
 
 Our For loop will look like this:
 
-  for (var i = 2; i < process.argv.length; i++) {
-    result += Number(process.argv[i]);
-  }
+    for (var i = 2; i < process.argv.length; i++) {
+      result += Number(process.argv[i]);
+    }
   
 So allow me to explain. 
 
