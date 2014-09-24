@@ -6,7 +6,7 @@ This can be a fun exercise to introduce using command line arguments and arrays.
 
 > Write a program that accepts one or more numbers as command-line arguments and prints the sum of those numbers to the console (stdout).
 
-So, lets consider what we need for this exercise. We need to be able to access data in the command line. Then we need to select parts of that data and perform a mathematical sum. Then we can `console.log()` the answer to that sum. Know we know what we need, let's look at the hints given to us.
+So, lets consider what we need for this exercise. We need to be able to access data in the command line. Then we need to select parts of that data and perform a mathematical sum. Then we can `console.log()` the answer to that sum. Now we know what we need, let's look at the hints given to us.
 
 # Hints
 
@@ -18,10 +18,10 @@ Let's go through the `process.argv` command in greater detail.
 
 An array containing the command line arguments. The first element will be 'node', the second element will be the name of the JavaScript file and directory. The next elements will be any additional command line arguments.
 
-  // print process.argv
-  process.argv.forEach(function(val, index, array) {
-    console.log(index + ': ' + val);
-  });
+    // print process.argv
+    process.argv.forEach(function(val, index, array) {
+      console.log(index + ': ' + val);
+    });
 
 This will generate:
 
