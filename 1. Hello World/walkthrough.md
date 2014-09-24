@@ -48,4 +48,4 @@ $ learnyounode verify helloworld.js
 4.  `console.log()` prints the contents of the brackets to the console.
 5.  You verify a program using `$ learnyounode verify programname.js`
 
-That's all for this tutorial. '
+That's all for this tutorial.
