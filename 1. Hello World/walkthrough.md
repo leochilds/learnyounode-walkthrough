@@ -17,11 +17,14 @@ To make Node.js program, create a new file with a `.js` extension and start writ
 $ node program.js
 ```
 
+So this first part tells you how to make a node script and then run it in node. So go ahead and make your file. I called mine helloworld.js
+
 You can write to the console in the same way as in the browser:
 
 ```js
 console.log("text")
 ```
+This here is basically giving us the answer. The console.log() function will take the object inside the brackets and print it out to the console. So in your file you can type console.log("HELLO WORLD"). Save it.
 
 When you are done, you must run:
 
@@ -29,4 +32,20 @@ When you are done, you must run:
 $ {appname} verify program.js
 ```
 
+So for your app you will type:
+
+```sh
+$ learnyounode verify helloworld.js
+```
+
 to proceed. Your program will be tested, a report will be generated, and the lesson will be marked 'completed' if you are successful.
+
+# Recap
+
+Node programs are javascript files.
+You run your program using `$ node programmename.js`
+Your can write to the console the same as in the browser.
+`console.log()` prints the contents of the brackets to the console.
+You verify a program using `$ learnyounode verify programname.js`
+
+That's all for this tutorial. '
