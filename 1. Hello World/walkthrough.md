@@ -24,7 +24,7 @@ You can write to the console in the same way as in the browser:
 ```js
 console.log("text")
 ```
-This here is basically giving us the answer. The console.log() function will take the object inside the brackets and print it out to the console. So in your file you can type console.log("HELLO WORLD"). Save it.
+This here is basically giving us the answer. The console.log() function will take the object inside the brackets and print it out to the console. So in your file you can type `console.log("HELLO WORLD")`. Save it.
 
 When you are done, you must run:
 
