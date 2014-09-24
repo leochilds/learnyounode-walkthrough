@@ -25,12 +25,12 @@ An array containing the command line arguments. The first element will be 'node'
 
 This will generate:
 
-  $ node process-2.js one two=three four
-  0: node
-  1: /Users/mjr/work/node/process-2.js
-  2: one
-  3: two=three
-  4: four
+    $ node process-2.js one two=three four
+    0: node
+    1: /Users/mjr/work/node/process-2.js
+    2: one
+    3: two=three
+    4: four
   
 So that might be a bit confusing, but thats whats in the official documentation at [nodejs.org](http://nodejs.org/api/process.html#process_process).
 
@@ -60,9 +60,9 @@ So in simple terms, we don't want to use the first two objects in the array. Let
 
 The For loop is structured as follows:
 
-  for (statement1; statement2; statement3) {
-    doSomething;
-  }
+    for (statement1; statement2; statement3) {
+      doSomething;
+    }
   
 Statement1 is a variable declaration. Statement2 is a condition to run the script. Statement3 is something to be done after the script runs. doSomething is the script to run if the condition is true.
 
