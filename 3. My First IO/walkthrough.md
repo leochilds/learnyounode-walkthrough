@@ -1,6 +1,6 @@
 # Exercise 3 - My First I/O
 
-In this exercise you are going to be using a sychronous prgoram to access a file system.
+In this exercise you are going to be using a sychronous program to access a file system.
 
 # Problem
 
@@ -22,7 +22,7 @@ Node has a simple module loading system. In Node, files and modules are in one-t
 var fs = require('fs')
 ```
 
-So this is the first line of our script. Sometimes they just give it away! In short, this module loads all the required dependencies the to allow filesystem operations. 
+So this is the first line of our script. Sometimes they just give it away! In short, this module loads all the required dependencies the program needs for filesystem functions.
 
 > Now you have the full `fs` module available in a variable named `fs`.
 
@@ -57,7 +57,7 @@ Let's go through this.
 2. `contents.toString()`: converts the array contents into a string.
 3. `.split('\n')`: Split this string back into an array, each split should be at a newline (using the newline character '\n').
 4. `.length`: Return the length of the array.
-5. `-1`: Deduct 1 from the result as the length be 1 more than the number f newline characters as stated in the hints.
+5. `-1`: Deduct 1 from the result as the length will be 1 more than the number f newline characters as stated in the hints.
 
 Finally you can `console.log(lines)`.
 
