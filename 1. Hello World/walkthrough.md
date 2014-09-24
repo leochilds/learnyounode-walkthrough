@@ -42,10 +42,10 @@ $ learnyounode verify helloworld.js
 
 # Recap
 
-Node programs are javascript files.
-You run your program using `$ node programmename.js`
-Your can write to the console the same as in the browser.
-`console.log()` prints the contents of the brackets to the console.
-You verify a program using `$ learnyounode verify programname.js`
+1.  Node programs are javascript files.
+2.  You run your program using `$ node programmename.js`
+3.  Your can write to the console the same as in the browser.
+4.  `console.log()` prints the contents of the brackets to the console.
+5.  You verify a program using `$ learnyounode verify programname.js`
 
 That's all for this tutorial. '
