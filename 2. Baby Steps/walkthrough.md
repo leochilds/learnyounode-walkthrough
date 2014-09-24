@@ -119,6 +119,6 @@ So to recap:
 5. `++` adds 1 to the value of the variable and reassigns this new value to the variable.
 6. `+=` adds the value on the left to the value of the variable on the right and reassigns this.
 7. `Number()` returns the number value of the contents fo the brackets.
-8. Using the square brackets [] you can select a specific item in an array.
+8. Using the square brackets [ ] you can select a specific item in an array.
 
 That's all for this tutorial.
