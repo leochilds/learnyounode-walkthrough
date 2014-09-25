@@ -10,7 +10,7 @@ In an asynchronous app, an event loop runs, which means that the readFile functi
 
 > The full path to the file to read will be provided as the first command-line argument.
 
-Easy peasy because you've already done this. SO what do we need? We need everything n the previous exercise, except we want to use an asynchronous process instead of readFileSync. Lets look at the hints given to us.
+Easy peasy because you've already done this. SO what do we need? We need everything in the previous exercise, except we want to use an asynchronous process instead of readFileSync. Lets look at the hints given to us.
 
 # Hints
 
@@ -28,7 +28,7 @@ function callback (err, data) { /* ... */ }
 
 Thats not really giving us much. Lets look at the documentation.
 
-# fs.readFile(filename, [options], callback)
+## fs.readFile(filename, [options], callback)
 
 - `filename` String
 - `options` Object
@@ -66,7 +66,7 @@ console.log(lines);
 })
 ```
 
-Now, we have an asychronous process doing the same thing as before. If you have a look at the official solution, you will see that `process.argv[2]` has been assigned to the variable `file`. This is could for reading the code and easily reusing the  file name. 
+Now, we have an asychronous process doing the same thing as before. If you have a look at the official solution, you will see that `process.argv[2]` has been assigned to the variable `file`. This is good for reading the code and easily reusing the  file name. 
 
 If you are having problems, make sure you delcared your fs variable. You still need the file system module.
 
@@ -74,7 +74,7 @@ If you are having problems, make sure you delcared your fs variable. You still n
 
 1. An asynchronous process allows the script to continue running.
 2. The `readFile()` function is the asynchronous version of `readFileSync()`.
-3. The `readFile()` takes the file name as its first parameter and a callback function as its last parameter. (You can have an options parameter but this si beyond the scope of this walkthrough).
+3. The `readFile()` takes the file name as its first parameter and a callback function as its last parameter. (You can have an options parameter but this is beyond the scope of this walkthrough).
 4. The callback function takes 2 parameters, the error handler `err` and the data parameter which is your file contents.
 
 That's all for this walkthrough.
