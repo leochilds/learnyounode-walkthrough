@@ -65,3 +65,81 @@ function bar (callback) {
   })
 }
 ```
+
+The best way to aproach this would be to write you program assuming your module has already been written to work. Then create your module. For those who are interested in testing (and you all should be!) this method makes it easy to write a test from the start. Then you just have to get the test to pass. So starting off our program:
+
+```js
+var filterFn = require('./program_filter.js')
+```
+
+For the purpose of clarification, filterFn is shorthand for filter Function. So first thing we have done is require our own module that we still haven't written yet. As per the hints, I have prefixed the filename with './'.
+
+We now need to use our module on our command line arguments as per the instructions. Taking the directory name, the extension and the callback function as our 3 arguments.
+
+```js
+filterFn(process.argv[2], process.argv[3], function (err, list) {
+  doSomething;
+})
+```
+
+If we are writing a test, our test will be checking if this works. Of course it doesn't, the module doesn't exist. Next we need to use our error handler properly. So, if statement:
+
+```js
+filterFn(process.argv[2], process.argv[3], function (err, list) {
+  if (err)
+    return console.error('There was an error:', err)
+})
+```
+
+So, if we have an error we should get back an error log. Now we need to `console.log` the filenames that have the correct extension. By refering to the previous exercise we want a `forEach` to `console.log` all the filenames. But we aren't allowed to put any other manipulation here. So just log our variable `file`:
+
+```js
+filterFn(process.argv[2], process.argv[3], function (err, list) {
+  if (err)
+    return console.error('There was an error:', err)
+
+  list.forEach(function (file) {
+    console.log(file)
+  })
+})
+```
+
+This is still pretty useless without our module, but it does provide some clarity in terms of what is supposed to be happening. Comparing this to the official solution, `process.argv[2]` and `process.argv[3]` have been assigned to the variables `dir` and `filterStr` respectively. This serves the purpose of providing our arguments for the `module.export` function in our module.
+
+We now need to write our module. Straight away, for our module to work we know we need the filesystem module and path module so:
+
+```js
+var fs = require('fs')
+var path = require('path')
+```
+
+Yes, our module requires modules. I can see an inception reference on the horizon. Easy bit over. Following the rules of our export we can write our `module.export` function.
+
+```js
+module.export = function (dir, filterStr, callback) { 
+  doSomething;
+}
+```
+
+Assigning the command line arguments to variables made this step relatively straight forward. We have our 3 arguments that we had to have, the directory, the extension and the callback function. Next up we want to do something... and we have already done it before, in the previous exercise. 
+
+```js
+fs.readdir(dir, function (err, list) {
+    list = list.filter(function (file) {
+      return path.extname(file) === '.' + filterStr
+    })
+})
+```
+
+So we can `readdir` our directory stored in the variable `dir`. We have our function with the `err` argument and data argument `list`. We've now introduced a new function `.filter()`. The `.filter()` method creates a new array with all elements that pass the test implemented by the provided function. So our test is the same as our previous if condition `path.extname(file) === '.' + filterStr`.
+
+Full documentation on `.filter()` can be found at [mozilla.org](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). The reason for using the filter method instead of our previous if statement is because under the conditions of the contract we mustn't log the file names from the module. This must be done in our program. So we store the information in an array so that we can call upon it later in our program. Remember the lines:
+
+```js
+list.forEach(function (file) {
+    console.log(file)
+  })
+```
+
+Effectively, logging each element in our `list` variable. We still need to put in our error callback. 
+
