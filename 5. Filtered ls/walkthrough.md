@@ -69,7 +69,7 @@ Then use the asynchronous process `fs.readdir`:
 
 ```js
 fs.readdir(pocess.argv[2], function(err, list) {
-doSomething;
+  doSomething;
 })
 ```
 
@@ -82,3 +82,49 @@ fs.readdir(process.argv[2], function (err, list) {
   })
 })
 ```
+
+Let me explain `forEach`. The `forEach()` method executes a provided function once per array element. The sytax to follow is:
+
+```js
+array.forEach(callbackFunction(, argument) {})
+```
+
+Full documentation can be found at [Mozilla.org](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach). 
+
+So for each filename in the directory we want to check for the file extension that we specify in the command line.
+
+```js
+fs.readdir(process.argv[2], function (err, list) {
+  list.forEach(function (file) {
+    if (path.extname(file) === '.' + process.argv[3])
+      console.log(file)
+  })
+})
+```
+
+Enter the `if` statement. 
+
+## if statements
+
+I don't really need a subheading for this. 
+
+```js
+if (condition)
+  doSomething
+```
+
+So if the condition is true, do something. If not... don't. `if` statements can be more complicated by providing `else` or `else if` but that is beyond the scope of this exercise.
+
+So our code reads, if the `path.extname()` of our `file` is equal to (`===`) the extension specified in our console, `console.log` the file name. There is also an extra bit: `'.' +` is simply adding the full stop for our file extension. Essentially you could give the full stop in your command line and omit this part of the code. So if the extension is the same as `.(process.argv[3])` then log it. 
+
+# Recap
+
+1.  `readdir()`: reads the contents of a directory (the file names).
+2.  The `path` module allows gives access to file directory structure and manipulation.
+3.  `extname`: returns the part of a string that comes after the final period (fullstop), including the period itself.
+4.  `forEach`: executes a specified function for each element in an array.
+5.  an `if` statement consists of a condition to be met and a function to execute should the condition be true.
+6.  `===`: operator to say 'equal in every way'. This is not used for assigning values. This is used in place of inequalities. `===` specifically means to be entirely the same. Not to be confused with `==` or `=`. Its opposite is `!==` to mean 'not equal'.
+7.  `+`: prefixes the string on the right hand side with the string on the left hand side. Also used in math.
+
+That's all for this tutorial.
