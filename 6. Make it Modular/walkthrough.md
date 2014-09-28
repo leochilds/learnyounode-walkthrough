@@ -113,7 +113,7 @@ var fs = require('fs')
 var path = require('path')
 ```
 
-Yes, our module requires modules. I can see an inception reference on the horizon. Easy bit over. Following the rules of our export we can write our `module.export` function.
+Yes, our module requires modules. I can see an inception reference on the horizon. Easy bit over. Following the rules of our export we can write `module.export` with 3 arguments that exports our function for use in our program.
 
 ```js
 module.export = function (dir, filterStr, callback) { 
@@ -141,5 +141,48 @@ list.forEach(function (file) {
   })
 ```
 
-Effectively, logging each element in our `list` variable. We still need to put in our error callback. 
+Effectively, logging each element in our `list` variable. We still need to put in our error callback as specified in the contract.
 
+```js
+module.exports = function (dir, filterStr, callback) {
+
+  fs.readdir(dir, function (err, list) {
+    if (err)
+      return callback(err)
+
+    list = list.filter(function (file) {
+      return path.extname(file) === '.' + filterStr
+    })
+
+    callback(null, list)
+  })
+}
+```
+
+So if there is an error, return the callback `err`, which is our early callback as specified in the hints. If there is now error, later `callback` the value `null` for our `err` argument as per the hints.
+
+We should now have 2 files. One is our module and the other is our program. Our program can clal upon our module and use it as a function to perform the task as per the last exercise. We have also written a response to errors. You can run your program using:
+
+```cs
+$ node program.js directory ext
+```
+
+Or verify with:
+
+```cs
+$ leanryounode verify program.js
+```
+
+# Recap
+
+This has been quite a long and difficult exercise, and grasping some of the concepts can be quit difficult. I suggest further reading of modules in node documentation and further practice can be carried out by writing modulated versions of the previous exercises.
+
+1.  Using contracts for modules is beneficial for collaborative development.
+2.  When writing your own modules you'll need to prefix the name with './'.
+3.  Your `require` your modules the same way as nodes own modules.
+4.  `module.export`: allows your to export a function from your module.
+5.  `.filter()`: creates an array of all the elements that pass a test provided by your function
+6.  use `if (err)` early on in your script for early error callback for efficiency
+7.  make sure to provide a `null` value when there is no error.
+
+That's all for this walthrough.
