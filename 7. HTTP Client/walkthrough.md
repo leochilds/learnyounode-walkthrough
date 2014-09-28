@@ -62,7 +62,7 @@ So by running your program using:
 $ node program.js url
 ```
 
-You can see the response to your request printed out in the command line. This will provide the either a specifi response set to handle these requests or it will send you the html, or the HyperText Markup Language, which is exactly what HTTP is supposed to do.
+You can see the response to your request printed out in the command line. If the url points to an html document, you will get each line of the document printed out in the console. 
 
 # Recap
 
@@ -71,3 +71,5 @@ You can see the response to your request printed out in the command line. This w
 3.  The `.get` callback function doesn't follow the same node format that we have previously seen. 
 4.  `.on()`: assigns our event handlers.
 5.  Its good practice to include the used encoding. You can't always get away with ommitting it like many people do in html documents.
+
+That's all for this walkthrough.
