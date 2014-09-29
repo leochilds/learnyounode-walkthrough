@@ -159,9 +159,9 @@ module.exports = function (dir, filterStr, callback) {
 }
 ```
 
-So if there is an error, return the callback `err`, which is our early callback as specified in the hints. If there is now error, later `callback` the value `null` for our `err` argument as per the hints.
+So if there is an error, return the callback `err`, which is our early callback as specified in the hints. If there is no error, later `callback` the value `null` for our `err` argument as per the hints.
 
-We should now have 2 files. One is our module and the other is our program. Our program can clal upon our module and use it as a function to perform the task as per the last exercise. We have also written a response to errors. You can run your program using:
+We should now have 2 files. One is our module and the other is our program. Our program can call upon our module and use it as a function to perform the task as per the last exercise. We have also written a response to errors. You can run your program using:
 
 ```cs
 $ node program.js directory ext
