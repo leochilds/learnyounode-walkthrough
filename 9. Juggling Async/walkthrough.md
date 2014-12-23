@@ -18,7 +18,7 @@ So for this exercise we need to collect data from several urls, and as we reciev
 
 > Counting callbacks is one of the fundamental ways of managing async in Node. Rather than doing it yourself, you may find it more convenient to rely on a third-party library such as [async](http://npm.im/async) or [after](http://npm.im/after). But for this exercise, try and do it without any external helper library.
 
-So they aren't really giving us anything new. Just some friendly advise is all. Just as in the revious task we need our `bl` and `http` modules:
+So they aren't really giving us anything new. Just some friendly advise is all. Just as in the previous task we need our `bl` and `http` modules:
 
 ```js
 var bl = require('bl')
@@ -55,7 +55,7 @@ function httpGet (index) {
 }
 ```
 
-Our function, as part of the for loop will scrool through index 0, 1 and 2. We can use this as we have done before to access each part of a command line argument that we want. Skipping out the first 2 arguments:
+Our function, as part of the for loop will scroll through index 0, 1 and 2. We can use this as we have done before to access each part of a command line argument that we want. Skipping out the first 2 arguments:
 
 ```js
 function httpGet (index) {
@@ -144,6 +144,6 @@ And you've done it. Our `printResults` function now loops through our results ar
 
 1.  Embed functions for easy reuse.
 2.  Asynchronous processes happen at the same time, so faster processes finish sooner. 
-3.  You need to manage your asynchronous processes, so that your functions act in the corret order.
+3.  You need to manage your asynchronous processes, so that your functions act in the correct order.
 
 That's all for this walkthrough.
