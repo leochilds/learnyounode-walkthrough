@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your awesome title</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 26 Dec 2014 13:31:05 +0000</pubDate>
+    <lastBuildDate>Fri, 26 Dec 2014 13:31:05 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>First Post</title>
+        <description>&lt;h1 id=&quot;learnyounode-walkthrough&quot;&gt;Learnyounode Walkthrough&lt;/h1&gt;
+
+&lt;p&gt;This repository contains a written walkthrough for each of the learnyounode exercises. Whilst learnyounode is a learning tool in itself, the exercises can be quite challenging for those who have only recently started coding for the web. These walkthroughs will aim to explain each terms functionallity and help guide the thought process through each exercise.&lt;/p&gt;
+
+&lt;p&gt;For effective learning I suggest that you attempt to tackle all the learnyounode exercises by yourself at first. Then when stuck you can use these walkthroughs, in whole or in part to help get your through and better your understanding of the code.&lt;/p&gt;
+
+&lt;h1 id=&quot;directory-structure&quot;&gt;Directory structure&lt;/h1&gt;
+
+&lt;p&gt;For each exercise there will be a sub-folder with the name of the exercise. Within the folder will be a walthrough and the official solution. Don’t bother going straight to the official solution, you won’t learn anything that way.&lt;/p&gt;
+
+&lt;h1 id=&quot;videos&quot;&gt;Videos&lt;/h1&gt;
+
+&lt;p&gt;Some time ago I started making videos going through these exercises however I only made it as far as exercise 2. These videos take time to put together and the written walkthroughs are far more comprehensive. I do intend to pick-up on the videos again in the future, but these will still be best paired with the written guides.&lt;/p&gt;
+
+&lt;h1 id=&quot;site&quot;&gt;Site&lt;/h1&gt;
+&lt;p&gt;The site generated using jekyll will have teh same structure as a blog and I intend to add more walkthroughs and tutorials under different categories. &lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 26 Dec 2014 13:22:23 +0000</pubDate>
+        <link>http://yourdomain.com/miscellaneous/2014/12/26/First-Post.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/miscellaneous/2014/12/26/First-Post.html</guid>
+        
+        
+        <category>miscellaneous</category>
+        
+      </item>
+    
+  </channel>
+</rss>
