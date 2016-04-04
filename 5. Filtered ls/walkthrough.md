@@ -68,7 +68,7 @@ var path = require('path')
 Then use the asynchronous process `fs.readdir`:
 
 ```js
-fs.readdir(pocess.argv[2], function(err, list) {
+fs.readdir(process.argv[2], function(err, list) {
   doSomething;
 })
 ```
