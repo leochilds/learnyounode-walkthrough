@@ -30,7 +30,7 @@ function callback (err, list) { /* ... */ }
 > Documentation on the `path` module can be found by pointing your browser here:
   {rootdir:/node_apidoc/path.html}
   
-So the hints have introduced a few new ideas that we need to research. First off is the `readdir()` process. Not dissimilar to `readFile`, it can read a firectory using the filesystem module. Using the standard method of node we have a callback function, which the second argument, our data being `list` which is an array of filenames as strings. 
+So the hints have introduced a few new ideas that we need to research. First off is the `readdir()` process. Not dissimilar to `readFile`, it can read a directory using the filesystem module. Using the standard method of node we have a callback function, which the second argument, our data being `list` which is an array of filenames as strings. 
 
 We really need to take a look at the documentation on `path.extname`.
 
