@@ -116,7 +116,7 @@ var path = require('path')
 Yes, our module requires modules. I can see an inception reference on the horizon. Easy bit over. Following the rules of our export we can write `module.export` with 3 arguments that exports our function for use in our program.
 
 ```js
-module.export = function (dir, filterStr, callback) { 
+module.exports = function (dir, filterStr, callback) { 
   doSomething;
 }
 ```
