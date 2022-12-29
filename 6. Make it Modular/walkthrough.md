@@ -170,7 +170,7 @@ $ node program.js directory ext
 Or verify with:
 
 ```cs
-$ leanryounode verify program.js
+$ learnyounode verify program.js
 ```
 
 # Recap
